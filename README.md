@@ -1,4 +1,8 @@
 # JavaScriptStyleGuide
+javascript代码规范
+create by 不下 2015.07.21
+
+##本代码规范参照idiomatic.js、airbnb和谷歌代码规范，结合自己的经验编写而成，以供参考。
 
 
 # Sublime Text 插件
