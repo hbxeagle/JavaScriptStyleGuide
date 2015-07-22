@@ -2,7 +2,7 @@
 javascript代码规范
 create by 不下 2015.07.21
 
-###本代码规范参照idiomatic.js、airbnb和谷歌代码规范，结合自己的经验编写而成，以供参考。
+###本代码规范参照idiomatic.js、Airbnb JavaScript Style Guide和谷歌代码规范，结合自己的经验编写而成，以供参考。
 
 
 # Sublime Text 插件
@@ -1276,7 +1276,7 @@ var email = userInfo['email'];
 
 # 参考
 [idiomatic.js](https://github.com/rwaldron/idiomatic.js/)</br>
-[airbnbjs](https://github.com/airbnb/javascript/tree/master/es5)</br>
+[Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript/tree/master/es5)</br>
 [google javascriptguide](http://google.github.io/styleguide/javascriptguide.xml)</br>
 
 
