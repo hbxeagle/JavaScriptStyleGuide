@@ -142,7 +142,7 @@ var fullName = "Bob " + this.lastName;
 // good
 var fullName = 'Bob ' + this.lastName;
 ```
-字符串长度超过80个字符是，应该分成多行，通过字符串连接符进行连接。\\
+字符串长度超过80个字符是，应该分成多行，通过字符串连接符进行连接。
 注：如果过度使用连接符，长字符串拼接会有性能问题。
 ```javascript
 // bad
@@ -222,7 +222,7 @@ var named = function named() {
 })();
 ```
 
-绝对不要在“非功能”块中申明方法（如，if、while等），而是通过将方法赋值给一个变量实现。浏览器会允许你这么做，但是他们会有各自的解析。\\
+绝对不要在“非功能”块中申明方法（如，if、while等），而是通过将方法赋值给一个变量实现。浏览器会允许你这么做，但是他们会有各自的解析。
 注：ECMA-262 定义一个代码块是一组语句，但申明方法并不算是语句。
 ```javascript
 // bad
@@ -546,7 +546,7 @@ function getType() {
   return type;
 }
 ```
-使用前缀 ```javascriptFIXME 和 TODO``` 标注注释，方便开发人员快速理解需要解决的问题，或着提出解决的建议。\\
+使用前缀 ```javascriptFIXME 和 TODO``` 标注注释，方便开发人员快速理解需要解决的问题，或着提出解决的建议。
 
 ```javascript
 
@@ -751,7 +751,7 @@ var hero = {
   superPower: 'strength'
 };
 ```
-注：多余的逗号，在ie6/ie7和ie9 \\quirksmode会引发错误。同样的在一些执行ES3标准的浏览器中，多余的逗号会使数组的长度增加。这个问题在ES5中已经修复。
+注：多余的逗号，在ie6/ie7和ie9 quirksmode会引发错误。同样的在一些执行ES3标准的浏览器中，多余的逗号会使数组的长度增加。这个问题在ES5中已经修复。
 ```javascript
 // bad
   var hero = {
@@ -963,7 +963,7 @@ function() {
 ```
 
 # 属性存取函数
-属性存取函数不是必须的。\\
+属性存取函数不是必须的。
 如果你需要使用属性存取函数，请用getVal()和setVal('hello')的方式命名
 ```javascript
 // bad
@@ -992,7 +992,7 @@ if (!dragon.hasAge()) {
 ```
 
 # 构造函数
-分配而不是覆盖新对象的prototype。覆盖prototype会导致不能继承：通过复位prototype，会重写base的prototype\\
+分配而不是覆盖新对象的prototype。覆盖prototype会导致不能继承：通过复位prototype，会重写base的prototype
 属性要定义在构造函数中，函数定义在prototype上
 ```javascript
 
@@ -1186,7 +1186,7 @@ function setSidebar() {
   });
 }
 ```
-使用层叠方式查找DOM，如$('.sidebar ul') 或者 parent > child $('.sidebar > ul') \\
+使用层叠方式查找DOM，如$('.sidebar ul') 或者 parent > child $('.sidebar > ul') 
 需要调用作用域内的已经缓存的jQuery对象进行查询时，使用 find
 ```javascript
 // bad
@@ -1206,8 +1206,8 @@ $sidebar.find('ul').hide();
 ```
 
 # 闭包
-闭包，也许是js中最有用和最经常被忽略的功能。\\
-但是，有一点要特别注意，闭包会在它封闭的作用域中保存变量引用。其结果是，附带着会创建DOM对象的循环引用，从而产生内存泄露。\\
+闭包，也许是js中最有用和最经常被忽略的功能。
+但是，有一点要特别注意，闭包会在它封闭的作用域中保存变量引用。其结果是，附带着会创建DOM对象的循环引用，从而产生内存泄露。
 例如下面的代码：
 ```javascript
 
@@ -1231,7 +1231,7 @@ function bar(a, b) {
 ```
 
 # delete
-在现代的js引擎中，修改对象的元素个数比重新分配对应的值要慢的多。\\
+在现代的js引擎中，修改对象的元素个数比重新分配对应的值要慢的多。
 所以要尽量避免使用delete删除键，除非有必须删除一个键，如在迭代器中，或者是for in循环中。
 ```javascript
 
@@ -1248,7 +1248,7 @@ Foo.prototype.dispose = function() {
 
 
 # eval
-仅在代码加载器或者REPL（交互式的开发环境）中使用eval，通常情况下使用JSON.parse替代eval\\
+仅在代码加载器或者REPL（交互式的开发环境）中使用eval，通常情况下使用JSON.parse替代eval
 例如，如果从服务端返回如下字符串
 ```javascript
 {
@@ -1269,14 +1269,14 @@ var email = userInfo['email'];
 ```
 
 # with(){}
-不要使用with，因为：\\
-在with语句中的函数定义和变量初始化可能产生令人惊讶，和直觉相抵触的行为。\\
-使用with语句速度要比不使用with语句的等价代码的速度慢得多。\\
+不要使用with，因为：
+在with语句中的函数定义和变量初始化可能产生令人惊讶，和直觉相抵触的行为。
+使用with语句速度要比不使用with语句的等价代码的速度慢得多。
 90%(或者更高比例)的with应用场景都可以用其他更好的方式代替
 
 # 参考
-https://github.com/rwaldron/idiomatic.js/\\
-https://github.com/airbnb/javascript/tree/master/es5\\
-http://google.github.io/styleguide/javascriptguide.xml
+[idiomatic.js]https://github.com/rwaldron/idiomatic.js/
+[airbnbjs]https://github.com/airbnb/javascript/tree/master/es5
+[google javascriptguide]http://google.github.io/styleguide/javascriptguide.xml
 
 
