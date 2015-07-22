@@ -373,13 +373,13 @@ function() {
 
 # 比较操作符
 优先使用 === 和 !== 替换 == 和 != </br>
-  像if这样的条件判断语句，会遵循下面简单的规则，将表达式转换为布尔型的值。</br>
-    Objects 等价于 true</br>
-    Undefined 等价于 false</br>
-    Null 等价于 false</br>
-    Booleans 等价于 对应的布尔值</br>
-    Numbers 如果是 0 或者 NaN 等价于 false，其他的等价于 true</br>
-    Strings 除了空字符串 '' 等价于 false，其他的等价于 true</br>
+* 像if这样的条件判断语句，会遵循下面简单的规则，将表达式转换为布尔型的值。</br>
+  * Objects 等价于 true</br>
+  * Undefined 等价于 false</br>
+  * Null 等价于 false</br>
+  * Booleans 等价于 对应的布尔值</br>
+  * Numbers 如果是 0 或者 NaN 等价于 false，其他的等价于 true</br>
+  * Strings 除了空字符串 '' 等价于 false，其他的等价于 true</br>
 ```javascript
 if ([0]) {
   // true
@@ -573,8 +573,8 @@ function Calculator() {
 
 # 空格
 永远都不要混用空格和Tab
-    编辑中设置两个空格代替Tab
-    总是打开 “显示不可见字符” 这个设置
+* 编辑中设置两个空格代替Tab
+* 总是打开 “显示不可见字符” 这个设置
 ```javascript
 // bad
 function() {
